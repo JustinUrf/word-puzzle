@@ -13,15 +13,13 @@ function wordPuzzle(text) {
   return completeSentence
 };
 
-
-
 // UI Logic
-
 function handleFormSubmission() {
   event.preventDefault();
   const passage = document.getElementById("text-passage").value.replace(/\r\n/g,'\n');
   // wordPuzzle(passage);
   const finishedPuzzle = wordPuzzle(passage);
+  document.getElementById("puzzle").innertext = passage;
   document.getElementById("final-puzzle").innerText = finishedPuzzle;
 };
 
